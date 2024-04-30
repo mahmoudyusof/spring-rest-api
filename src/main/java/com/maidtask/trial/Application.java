@@ -28,6 +28,7 @@ public class Application {
 			patronRepository.save(new Patron(null, "Jane Doe", "jane@doe.com", new ArrayList<>(), null));
 			patronRepository.save(new Patron(null, "Alice", "alice@google.com", new ArrayList<>(), null));
 			patronRepository.save(new Patron(null, "Bob", "bob@something.com", new ArrayList<>(), null));
+			patronRepository.save(new Patron(null, "Charlie", "charlie@hotmail.com", new ArrayList<>(), null));
 
 			// create 10 books
 			booksRepository.save(new Book(null, "The Great Gatsby", "F. Scott Fitzgerald", 1999, "99586665841", null));

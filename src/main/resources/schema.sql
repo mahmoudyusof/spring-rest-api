@@ -20,10 +20,13 @@ CREATE TABLE IF NOT EXISTS patrons (
 );
 
 CREATE TABLE IF NOT EXISTS borrowing (
-  book_id INT NOT NULL,
+  id INT NOT NULL,
   patron_id INT NOT NULL,
+  book_id INT NOT NULL,
   borrowing_date DATE NOT NULL,
   return_date DATE,
-  PRIMARY KEY (book_id, patron_id),
+  PRIMARY KEY (id, patron_id, book_id),
+  foreign key (patron_id) references patrons(id),
+  foreign key (book_id) references books(id),
   version INT
 );
